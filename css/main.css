@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cbg-bluegreen{
+    background: rgb(130,255,127);
+    background: linear-gradient(151deg, rgba(130,255,127,1) 17%, rgba(0,194,255,1) 90%);
+}
+
+.special-blue{
+    color: rgba(0,194,255,1);
+}
