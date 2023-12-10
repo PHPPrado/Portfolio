@@ -11,36 +11,43 @@
     <title>Portfólio</title>
 </head>
 <body class="cbg-bluegreen">
-    <header class="flex justify-center items-center md:justify-normal">
+    <header class="flex justify-center items-center md:justify-normal md:fixed">
         <img class="w-20 mt-1 ml-1 hidden md:block" src="images/Logos 2024/LogoSemFundo.png" alt="">
-        <a class="font-nunito font-bold text-white mt-5 mr-4 text-xl md:mt-2 hover:scale-95 transition duration-200" href="">Home</a>
-        <a class="font-nunito font-bold text-white mt-5 mx-4 text-xl md:mt-2 hover:scale-95 transition duration-200" href="">Projetos</a>
-        <a class="font-nunito font-bold text-white mt-5 mx-4 text-xl md:mt-2 hover:scale-95 transition duration-200" href="">Sobre</a>
+        <a class="hidden md:block font-nunito font-bold text-white mt-5 mr-4 text-xl md:mt-2 hover:scale-95 transition duration-200" href="#home">Home</a>
+        <a class="font-nunito font-bold text-white mt-5 mx-4 text-xl md:mt-2 hover:scale-95 transition duration-200" href="#projetos">Projetos</a>
+        <a class="font-nunito font-bold text-white mt-5 mx-4 text-xl md:mt-2 hover:scale-95 transition duration-200" href="#certificados">Certificados</a>
+        <a class="hidden font-nunito font-bold text-white mt-5 mx-4 text-xl md:mt-2 hover:scale-95 transition duration-200 md:block" href="#sobre">Sobre</a>
+        <a class="font-nunito font-bold text-white mt-5 mx-4 text-xl md:mt-2 hover:scale-95 transition duration-200 md:hidden" href="#sobreMobile">Sobre</a>
     </header>
     <!--Início-->
-    <div class="flex flex-col justify-center md:flex-row">
-        <div class="hidden md:flex flex-col md:mt-32 md:w-1/2 ">
+    <div id="home" class="flex flex-col justify-center md:flex-row">
+        <div class="hidden md:flex flex-col md:mt-48 md:w-1/2">
             <h1 class="font-nunito font-bold text-white mx-4 text-7xl md:ml-28 md:text-9xl">Eai?</h1>
             <p class="font-nunito font-bold text-white mt-2 px-1 text-center text-md md:ml-28 md:text-xl md:w-3/3 md:text-start">Me chamo Pedro Henrique do Prado, sou um desenvolvedor Java. Curso atualmente Ciência da computação e busco me apriorar cada vez mais.</p>
         </div>
-        <img class="w-2/3 my-5 md:w-1/3 md:ml-10 self-center md:hover:scale-105 transition duration-500" src="images/Personagem.png" alt="">
+        <img class="w-2/3 my-5 md:w-1/3 md:ml-10 self-center md:hover:scale-105 transition duration-500 md:mt-24" src="images/Personagem.png" alt="">
             <h1 class="md:hidden font-nunito font-bold text-white mx-4 text-7xl text-center">Eai?</h1>
             <p class="md:hidden font-nunito font-bold text-white mt-2 px-1 text-center text-md">Me chamo Pedro Henrique do Prado, sou um desenvolvedor Java. Curso atualmente Ciência da computação e busco me apriorar cada vez mais.</p>
         <img class="w-10 my-5 -rotate-90 md:hidden self-center" src="images/seta-esquerda.png" alt="">
     </div>
 
     <!--Sobre DESKTOP-->
-    <div class="hidden md:flex md:flex-row md:mt-28 md:mx-52">
+    <div id="sobre" class="hidden md:flex md:flex-row md:mt-28 md:mx-52">
         <img class="w-2/4 rounded-full md:w-1/5 hidden md:block" src="images/FotoFundoBranco.png" alt="">
         <div class="md:flex-row md:ml-4 md:self-center">
             <h1 class="hidden font-nunito font-bold text-white my-1 text-2xl md:block">Pedro Henrique do Prado</h1>
             <p class="font-nunito text-white m-2 px-1 text-justify text-sm md:m-0 md:p-0">Sou um estudante de Ciência da Computação no 5° semestre, com habilidades em Python, mySQL e <spam class="font-bold">Java Spring</spam>. Com minha paixão por tecnologia e habilidades de programação, acredito que posso contribuir de forma significativa para qualquer equipe de desenvolvimento. Estou ansioso para crescer como desenvolvedor.</p>
+            <div class="flex flex-row mt-2">
+                <a href="https://www.linkedin.com/in/phpprado/"> <img class="mr-2 w-7 hover:scale-125 transition duration-300" src="images/linkedin (1).png" alt=""></a>
+                <a href="https://github.com/PHPPrado"> <img class="mr-2 w-7 hover:scale-125 transition duration-300" src="images/github.png" alt=""></a>
+                <a href="Currículo 2024.pdf" download="Currículo 2024.pdf"> <img class="mr-2 w-7 hover:scale-125 transition duration-300" src="images/cv.png" alt=""></a>
+            </div>
         </div>
     </div>
 
 
     <!--Projetos-->
-    <div class="flex flex-col justify-center items-center md:-mt-5">
+    <div id="projetos" class="flex flex-col justify-center items-center md:-mt-5">
         <h1 class="font-nunito font-bold text-white mx-4 my-5 text-7xl md:mt-40">Projetos</h1>
         <!--Card Projeto MOBILE-->
         <div class="m-5 flex flex-col justify-center items-center shadow-inner md:hidden">
@@ -54,7 +61,7 @@
             <div class="flex flex-col p-4">
                 <h1 class="font-nunito font-bold text-white my-1 text-5xl">AgrOrgânica</h1>
                 <p class="font-nunito text-white my-2 text-justify text-sm">Desenvolvi uma aplicação completa junto a colegas da faculdade, o projeto foi desenvolvido utilizando Java JDK (17), juntamente com Azure para hospedagem do banco de dados MySQL, Javascript e jquery para consumo da API via cep e apache Tomcat para hospedagem da aplicação localmente e TailwindCss, Bootstrap para estilização.</p>
-                <a class="p-2 w-28 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center" href="https://github.com/PHPPrado/JavaWebapp-organic-agriculture.git">Ver projeto</a>
+                <a class="p-2 w-28 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center hover:scale-105 transition duration-150" href="https://github.com/PHPPrado/JavaWebapp-organic-agriculture.git">Ver projeto</a>
             </div>
             <video class="mr-5 my-5 w-3/6 rounded-md" autoplay src="Videos/AGO - Agricutura orgânica.mp4"></video>
         </div>
@@ -64,25 +71,45 @@
             <h1 class="font-nunito font-bold text-white my-1 text-3xl">Portfólio 2022</h1>
             <p class="font-nunito text-white m-2 px-1 text-justify text-sm">
                 Com o objetivo de colocar a prova meus conhecimentos sobre desenvolvimento web, decidi então montar este portfólio, aproveitando para compartilhar meus conhecimentos, certificados, competências e outros projetos.</p>
-            <a class="p-2 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue m-2 text-center text-md" href="https://github.com/PHPPrado/JavaWebapp-organic-agriculture.git">Ver projeto</a>
+            <a class="p-2 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue m-2 text-center text-md" href="https://github.com/PHPPrado/Portfolio_2022.git">Ver projeto</a>
+            
         </div>
         <!--Card Projeto DESKTOP-->
         <div class="hidden md:flex md:shadow-2xl md:rounded-lg md:hover:scale-105 transition duration-500 md:mx-40 md:mb-14">
             <div class="flex flex-col p-4">
                 <h1 class="font-nunito font-bold text-white my-1 text-5xl">Portfólio 2022</h1>
                 <p class="font-nunito text-white my-2 text-justify text-sm">Com o objetivo de colocar a prova meus conhecimentos sobre desenvolvimento web, decidi então montar este portfólio, aproveitando para compartilhar meus conhecimentos, certificados, competências e outros projetos.</p>
-                <a class="p-2 w-28 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center" href="https://github.com/PHPPrado/JavaWebapp-organic-agriculture.git">Ver projeto</a>
+                <a class="p-2 w-28 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center hover:scale-105 transition duration-150" href="https://github.com/PHPPrado/Portfolio_2022.git">Ver projeto</a>
             </div>
             <video class="mr-5 my-5 w-3/6 rounded-md" autoplay src="Videos/Pedro Henrique do Prado.mp4"></video>
         </div>
 
+                <!--Card Projeto MOBILE-->
+        <div class="m-5 flex flex-col justify-center items-center shadow-inner md:hidden">
+            <img class="my-5 w-5/6 rounded-md border-white border-2" src="images/Banner PIZZA.png"></img>
+            <h1 class="font-nunito font-bold text-white my-1 text-3xl">Pizza API</h1>
+            <p class="font-nunito text-white m-2 px-1 text-justify text-sm">Uma API desenvolvida com Java e Spring, aqui pode-se encontrar todo o gerenciamento de uma pizzaria, desde cadastro de clientes até criação de pedidos, status, e sistema de carrinho. Tudo pronto para ser aplicado em uma pizzaria.</p>
+            <a class="p-2 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue m-2 text-center text-md" href="https://github.com/PHPPrado/Pizza_API.git">Ver projeto</a>
+            
+        </div>
+        <!--Card Projeto DESKTOP-->
+        <div class="hidden md:flex md:shadow-2xl md:rounded-lg md:hover:scale-105 transition duration-500 md:mx-40 md:mb-14">
+            <div class="flex flex-col p-4">
+                <h1 class="font-nunito font-bold text-white my-1 text-5xl">Pizza API</h1>
+                <p class="font-nunito text-white my-2 text-justify text-sm">Uma API desenvolvida com Java e Spring, aqui pode-se encontrar todo o gerenciamento de uma pizzaria, desde cadastro de clientes até criação de pedidos, status, e sistema de carrinho. Tudo pronto para ser aplicado em uma pizzaria.</p>
+                <a class="p-2 w-28 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center hover:scale-105 transition duration-150" href="https://github.com/PHPPrado/Pizza_API.git">Ver projeto</a>
+            </div>
+            <img class="mr-5 my-5 w-3/6 rounded-md border-white border-2" src="images/Banner PIZZA.png"></img>
+        </div>
+
+        
         
         <!--Card Em breve-->
         <div class="m-5 flex flex-col justify-center items-center shadow-inner md:hidden">
-            <img class="my-5 w-5/6 rounded-md border-white border-2" autoplay src="Videos/Em breve...2.gif"></img>
+            <img class="my-5 w-5/6 rounded-md border-white border-2" autoplay src="Videos/Em breve...3.gif"></img>
             <h1 class="font-nunito font-bold text-white my-1 text-3xl">Em Breve</h1>
             <p class="font-nunito text-white m-2 px-1 text-start text-sm">Em breve mais um projeto chegando...</p>
-            <a class="p-2 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue m-2 text-center text-md" href="https://github.com/PHPPrado/JavaWebapp-organic-agriculture.git">Ver outros projetos</a>
+            <a class="p-2 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue m-2 text-center text-md" href="https://github.com/PHPPrado/">Ver outros projetos</a>
         </div>  
         
         <!--Card Em breve DESKTOP-->
@@ -90,13 +117,29 @@
             <div class="flex flex-col p-4">
                 <h1 class="font-nunito font-bold text-white my-1 text-5xl">Em breve</h1>
                 <p class="font-nunito text-white my-2 text-start text-sm">Em breve mais um projeto chegando...</p>
-                <a class="p-2 w-28 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center" href="https://github.com/PHPPrado/JavaWebapp-organic-agriculture.git">Ver projeto</a>
+                <a class="p-2 w-40 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue my-2 text-md text-center hover:scale-105 transition duration-150" href="https://github.com/PHPPrado/">Ver outros projetos</a>
             </div>
-            <video class="mr-5 ml-48 my-5 w-3/6 rounded-md" autoplay src="Videos/AGO - Agricutura orgânica.mp4"></video>
+            <img class="mr-5 ml-48 my-5 w-3/6 rounded-md border-white border-2" autoplay src="Videos/Em breve...3.gif"></img>
         </div>
     </div>
 
-    <div class="flex flex-col md:flex-row justify-center items-center my-20 md:mx-72 md:-mt-1">
+    <!--Certificados-->
+    <h1 id="certificados" class=" flex font-nunito font-bold text-white my-5 justify-center text-5xl md:mt-32 md:mb-20 md:text-7xl">Certificados</h1>
+    <div class="flex flex-col items-center md:flex-wrap md:flex-row md:justify-center">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado 1 UX.png" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado_UDEMY.jpg" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado CS50x.png" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/IA_Oracle.jpeg" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado Iniciante em programaçao ONE T3.png" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado Banco de Dados Linkedin.png" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/JAVA_ROCKET.png" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado Srum.jpeg" alt="">
+        <img class="w-3/4 my-2 border-2 border-white rounded-md shadow-2xl md:w-1/4 md:mx-2 hover:scale-105 transition duration-300" src="images/Certificados/Certificado Java POO 01.png" alt="">
+    </div>
+    <a class="flex my-10 mx-auto p-2 w-36 rounded-md shadow-2xl font-nunito font-bold bg-white special-blue text-md text-center hover:scale-105 transition duration-150" href="https://www.linkedin.com/in/phpprado/">Mais Certificados</a>
+
+    <!--Sobre MOBILE-->
+    <div id="sobreMobile" class="flex flex-col md:flex-row justify-center items-center my-20 md:mx-72 md:-mt-1">
         <img class="w-2/4 rounded-full md:w-1/5 md:hidden" src="images/FotoFundoBranco.png" alt="">
         <h1 class="font-nunito font-bold text-white my-1 text-2xl md:hidden">Pedro Henrique do Prado</h1>
         <div class="flex md:hidden">
@@ -111,4 +154,6 @@
         <img class="w-12 m-5" src="images/Logos 2024/LogoSemFundo.png" alt="">
     </footer>
 </body>
+
+<script src="js/main.js"></script>
 </html>
